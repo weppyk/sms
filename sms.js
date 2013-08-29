@@ -3,6 +3,12 @@
 var url = require('url');
 var url_parts =url.parse(request.url,true);
 var query = url_parts.query;
+var app = require('express');
+
+app.post('/', function(request, response) {
+    console.log(request.body.number);
+    console.log(request.body.message);
+}
 
 console.log(query);
 
